@@ -1,0 +1,38 @@
+.stats{
+  padding:150px 7%;
+
+  background:white;
+}
+
+.stats-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:30px;
+
+  margin-top:80px;
+}
+
+.stat-card{
+  background:white;
+
+  padding:50px;
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+}
+
+.stat-card h3{
+  font-size:4rem;
+
+  color:var(--accent);
+}
+
+.stat-card p{
+  margin-top:15px;
+
+  color:var(--text-light);
+}

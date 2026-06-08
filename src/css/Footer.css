@@ -1,0 +1,42 @@
+.footer{
+  padding:100px 7% 40px;
+
+  background:white;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+
+  gap:50px;
+
+  padding-bottom:60px;
+
+  border-bottom:
+  1px solid var(--border);
+}
+
+.footer-top h2{
+  font-size:3rem;
+}
+
+.footer-top p{
+  margin-top:15px;
+
+  color:var(--text-light);
+}
+
+.footer-links{
+  display:flex;
+  gap:40px;
+}
+
+.footer-links a{
+  color:var(--text);
+}
+
+.footer-bottom{
+  padding-top:40px;
+
+  color:var(--text-light);
+}
