@@ -2,7 +2,7 @@ import "../css/CTASection.css";
 
 const CTASection = () => {
   return (
-    <section className="cta">
+    <section className="cta" id="build">
 
       <div className="cta-overlay"></div>
 

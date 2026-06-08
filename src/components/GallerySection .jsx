@@ -11,7 +11,7 @@ const images = [
 
 const GallerySection = () => {
   return (
-    <section className="gallery-section">
+    <section className="gallery-section" id="gallery">
 
       <div className="gallery-header">
         <span>ADVENTURE GALLERY</span>

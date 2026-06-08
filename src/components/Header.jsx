@@ -35,9 +35,9 @@ const Header = () => {
           <nav className="nav-menu">
             <a href="#">Home</a>
             <a href="#products">Products</a>
-            <a href="#">Build</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+            <a href="#build">Build</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
           </nav>
 
           <button className="header-btn">
