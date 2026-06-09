@@ -24,19 +24,19 @@ const Header = () => {
       <header
         className={`header ${
           scrolled ? "active" : ""
-        }`}
+        } `}
       >
-        <div className="container header-inner">
+        <div className="container header-inner" >
 
           <div className="logo">
             DRIVE<span>RANGER</span>
           </div>
 
           <nav className="nav-menu">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
             <a href="#products">Products</a>
-            <a href="#build">Build</a>
             <a href="#gallery">Gallery</a>
+            <a href="#build">Build</a>
             <a href="#contact">Contact</a>
           </nav>
 

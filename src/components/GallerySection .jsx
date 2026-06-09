@@ -6,20 +6,16 @@ const images = [
   "/gallery/two.jpg",
   "/gallery/three.jpeg",
   "/gallery/four.jpg",
-//   "/images/gallery/gallery-5.jpg",
+  //   "/images/gallery/gallery-5.jpg",
 ];
 
 const GallerySection = () => {
   return (
     <section className="gallery-section" id="gallery">
-
       <div className="gallery-header">
         <span>ADVENTURE GALLERY</span>
 
-        <h2>
-          BUILT FOR
-          EVERY TERRAIN
-        </h2>
+        <h2>BUILT FOR EVERY TERRAIN</h2>
       </div>
 
       <motion.div
@@ -34,18 +30,11 @@ const GallerySection = () => {
         }}
       >
         {[...images, ...images].map((img, index) => (
-          <div
-            className="gallery-card"
-            key={index}
-          >
-            <img
-              src={img}
-              alt=""
-            />
+          <div className="gallery-card" key={index}>
+            <img src={img} alt="" />
           </div>
         ))}
       </motion.div>
-
     </section>
   );
 };

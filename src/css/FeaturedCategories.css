@@ -1,47 +1,57 @@
 .categories{
   padding:150px 7%;
-
   background:#faf8f4;
 }
 
 .section-header span{
   color:var(--accent);
-
-  letter-spacing:3px;
+  letter-spacing:4px;
+  font-size:.9rem;
 }
 
 .section-header h2{
   font-size:clamp(3rem,7vw,6rem);
-
   margin-top:15px;
   margin-bottom:80px;
-
-  line-height:.95;
+  line-height:.9;
 }
+
+/* ==========================
+   PREMIUM GRID
+========================== */
 
 .categories-grid{
   display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
+  grid-template-columns:repeat(12,1fr);
   gap:30px;
 }
 
+/* ==========================
+   CARD
+========================== */
+
 .category-card{
   position:relative;
-
-  height:500px;
-
   overflow:hidden;
 
-  border-radius:var(--radius);
+  border-radius:32px;
 
   background:white;
 
   box-shadow:var(--shadow);
 
   cursor:pointer;
+
+  transition:
+  transform .4s ease,
+  box-shadow .4s ease;
+}
+
+.category-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,.12);
 }
 
 .category-card img{
@@ -63,8 +73,8 @@
 
   background:
   linear-gradient(
-  transparent,
-  rgba(0,0,0,.7)
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.75)
   );
 }
 
@@ -77,26 +87,75 @@
   color:white;
 
   font-size:2rem;
+  font-weight:700;
+
+  z-index:2;
 }
 
+/* ==========================
+   PREMIUM LAYOUT
+========================== */
 
+.category-card:nth-child(1){
+  grid-column:span 8;
+  height:550px;
+}
 
+.category-card:nth-child(2){
+  grid-column:span 4;
+  height:550px;
+}
 
+.category-card:nth-child(3){
+  grid-column:span 4;
+  height:450px;
+}
 
+.category-card:nth-child(4){
+  grid-column:span 8;
+  height:450px;
+}
 
+.category-card:nth-child(5){
+  grid-column:span 6;
+  height:500px;
+}
+
+.category-card:nth-child(6){
+  grid-column:span 6;
+  height:500px;
+}
 
 /* ==========================
    LARGE LAPTOP
 ========================== */
 
-@media (max-width: 1200px) {
+@media (max-width:1200px){
 
-  .categories-grid {
-    gap: 20px;
+  .categories-grid{
+    gap:20px;
   }
 
-  .category-card h3 {
-    font-size: 1.8rem;
+  .category-card h3{
+    font-size:1.8rem;
+  }
+
+  .category-card:nth-child(1){
+    height:500px;
+  }
+
+  .category-card:nth-child(2){
+    height:500px;
+  }
+
+  .category-card:nth-child(3),
+  .category-card:nth-child(4){
+    height:420px;
+  }
+
+  .category-card:nth-child(5),
+  .category-card:nth-child(6){
+    height:450px;
   }
 }
 
@@ -104,29 +163,38 @@
    TABLET
 ========================== */
 
-@media (max-width: 992px) {
+@media (max-width:992px){
 
-  .categories {
-    padding: 120px 5%;
+  .categories{
+    padding:120px 5%;
   }
 
-  .section-header h2 {
-    margin-bottom: 60px;
+  .section-header h2{
+    margin-bottom:60px;
   }
 
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .categories-grid{
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
   }
 
-  .category-card {
-    height: 400px;
+  .category-card:nth-child(1),
+  .category-card:nth-child(2),
+  .category-card:nth-child(3),
+  .category-card:nth-child(4),
+  .category-card:nth-child(5),
+  .category-card:nth-child(6){
+    grid-column:auto;
+    height:400px;
   }
 
-  .category-card h3 {
-    font-size: 1.6rem;
-    left: 20px;
-    bottom: 20px;
+  .category-card h3{
+    font-size:1.6rem;
+
+    left:22px;
+    bottom:22px;
   }
 }
 
@@ -134,34 +202,36 @@
    MOBILE
 ========================== */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .categories {
-    padding: 100px 5%;
+  .categories{
+    padding:100px 5%;
   }
 
-  .section-header span {
-    font-size: 0.8rem;
+  .section-header span{
+    font-size:.8rem;
   }
 
-  .section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+  .section-header h2{
+    font-size:2.5rem;
+    margin-bottom:40px;
   }
 
-  .categories-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .categories-grid{
+    grid-template-columns:1fr;
+    gap:18px;
   }
 
-  .category-card {
-    height: 320px;
+  .category-card{
+    height:320px !important;
+    border-radius:24px;
   }
 
-  .category-card h3 {
-    font-size: 1.4rem;
-    left: 18px;
-    bottom: 18px;
+  .category-card h3{
+    font-size:1.4rem;
+
+    left:20px;
+    bottom:20px;
   }
 }
 
@@ -169,22 +239,25 @@
    SMALL MOBILE
 ========================== */
 
-@media (max-width: 480px) {
+@media (max-width:480px){
 
-  .categories {
-    padding: 80px 4%;
+  .categories{
+    padding:80px 4%;
   }
 
-  .section-header h2 {
-    font-size: 2rem;
+  .section-header h2{
+    font-size:2rem;
   }
 
-  .category-card {
-    height: 260px;
-    border-radius: 20px;
+  .category-card{
+    height:260px !important;
+    border-radius:20px;
   }
 
-  .category-card h3 {
-    font-size: 1.2rem;
+  .category-card h3{
+    font-size:1.2rem;
+
+    left:16px;
+    bottom:16px;
   }
-} 
+}
